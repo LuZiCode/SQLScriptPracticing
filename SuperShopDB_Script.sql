@@ -53,6 +53,17 @@ JOIN ProductOrder ON [Order].Order_ID = ProductOrder.Order_ID
 JOIN Product ON Product.Product_ID = ProductOrder.Product_ID
 GROUP BY Username, Email
 
+SELECT Customer.Username FROM Customer 
+WHERE Customer.Username LIKE '%x%'
+GROUP BY Customer.Username
+ORDER BY Customer.Username
+
+SELECT Product.Productname, Product.Price FROM Product
+WHERE Product.Price > 75
+GROUP BY Product.Price, Product.Productname
+ORDER BY Product.Price DESC
+
+
 
 SELECT * FROM Product
 SELECT * FROM Customer
